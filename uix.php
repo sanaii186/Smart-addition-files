@@ -2,16 +2,20 @@
 
 //simple add file for ui
 
+//file type
 function uix_file_type($name){
     $file_extension = pathinfo($name, PATHINFO_EXTENSION);
     return $file_extension;
 }
 
+//safe string fo add in page
 function uix_safe_string($text){
     $special_characters = array('-->', '<!--');
     $safe_string = str_replace($special_characters, '', $text);
     return $safe_string;
 }
+
+//simple add js,html,css,php
 function uix_simple_add_file(){
     
     $numArgs = func_num_args();
@@ -50,7 +54,7 @@ function uix_simple_add_file(){
 
 }
 
-
+//get and add js,html,css,php
 function uix_getcontent_add_file(){
     
     $numArgs = func_num_args();
